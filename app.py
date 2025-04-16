@@ -1,18 +1,23 @@
-from flask import Flask, render_template, request, jsonify
-from detector import is_phishing
+from flask import Flask, render_template, request
+import detector  
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
-@app.route('/check', methods=['POST'])
-def check():
-    data = request.get_json()
-    url = data['url']
-    result = is_phishing(url)
-    return jsonify({'result': result})
+@app.route('/detect', methods=['POST'])
+def detect():
+    url = request.form['url']
+    result = detector.check_url(url)
+    return render_template('index.html', input_url=url, result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)
+
+def detect():
+    url = request.form['url']
+    result = detector.check_url(url)
+    return render_template('index.html', input_url=url, result=result)
+
