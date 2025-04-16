@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phishing Link Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+      width: 400px;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Phishing Link Detector</h2>
+    <input type="text" id="urlInput" placeholder="Enter a URL...">
+    <button onclick="checkUrl()">Check</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkUrl() {
+      const url = document.getElementById("urlInput").value;
+      document.getElementById("result").innerText = "This is just a static UI.\nAdd backend logic to detect phishing.";
+    }
+  </script>
+</body>
+</html>
