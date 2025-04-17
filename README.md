@@ -1,9 +1,10 @@
-This project is a lightweight phishing detection tool developed during a 3-hour hackathon.
+This project is a lightweight phishing detection tool developed during a hackathon.
 It analyzes URLs to identify potential phishing threats using keyword matching and trusted domain verification.
 
 🚀 Features
 Keyword-Based Detection
-Flags URLs containing common phishing terms like login, verify, or free.
+It is a string based detection.
+Flags URLs containing common phishing terms like login, verify, or free, etc.
 
 Trusted Domain Check
 Recognizes and allows links from a fixed list of trusted websites like google.com, facebook.com, instagram.com, etc.
@@ -45,11 +46,7 @@ Edit
 python app.py
 Open your browser and go to http://127.0.0.1:5000/.
 
-📸 Screenshots
-(Add screenshots here if you want later.)
 
-📄 License
-This project is licensed under the MIT License.
 
 🙌 Acknowledgments
 Thanks to the hackathon team and fellow learners.
