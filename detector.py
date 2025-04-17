@@ -2,7 +2,7 @@ from urllib.parse import urlparse
 
 suspicious_keywords = ['free', 'login', 'verify', 'update', 'password', 'security']
 
-def is_phishing(url):
+def check_url(url):
     try:
         parsed_url = urlparse(url)
         domain = parsed_url.netloc.lower()
